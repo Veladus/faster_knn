@@ -1,0 +1,29 @@
+[package]
+name = "faster_knn"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+derive_more = "^0.99"
+good_lp = { version = "1.3", features = ["minilp"], default-features = false }
+serde = { version = "1.0", features = ["derive"] }
+
+[dev-dependencies]
+assert_approx_eq = "^1.1.0"
+criterion = { version = "^0.3", features = ["html_reports", "csv_output"] }
+csv = "1.1"
+kd-tree = "^0.3"
+num = "^0.4"
+proptest = "^0.10.1"
+rand = "^0.8.2"
+rand_xorshift = "^0.3.0"
+rayon = "^1.5"
+rstar = { version = "^0.8", features = ["serde"] }
+serde_json = "^1.0"
+
+[[bench]]
+name = "knn_comparison"
+path = "benches/knn_comparison.rs"
+harness = false
