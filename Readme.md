@@ -19,3 +19,13 @@ CONFIG_FILE=example.json cargo criterion --bench knn_comparison
 ```
 
 You can set the benchmark time using the environment variable `RUNNING_TIME`.
+
+## Machine Readable output
+The command above gives human-readable output.
+To get output that is better machine-readable use the following command.
+This will create a JSON file, representing the gathered benchmark data.
+```shell
+export CONFIG_FILE=example.json
+cargo criterion --output-format verbose --bench knn_comparison --message-format=json | tee $CONFIG_FILE.log
+awk -f postprocess.awk -i $CONFIG_FILE.log
+```
