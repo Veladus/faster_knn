@@ -12,7 +12,7 @@ After this you need to install the wrapper for the benchmark harness using
 cargo install cargo-criterion
 ```
 Finally you can use the following command to run the example.
-The first time any given config is run, the approximations are built and cached.
+The first time any given configuration is run, the approximations are built and cached.
 This might take a few additional minutes.
 ```shell
 CONFIG_FILE=example.json cargo criterion --bench knn_comparison
