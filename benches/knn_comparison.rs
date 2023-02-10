@@ -10,7 +10,7 @@ use std::{
 };
 
 
-use approximate_knn::QuadraticApproximation;
+use faster_knn::QuadraticApproximation;
 use kd_tree::{KdMap, KdTree2};
 use rand_xorshift::XorShiftRng;
 use rstar::{primitives::PointWithData, PointDistance, RTree};

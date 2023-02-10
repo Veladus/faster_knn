@@ -1,0 +1,8 @@
+{
+    "approximation_upto": 5000,
+    "approximation_quality": {
+		"Ratio" : 2.0
+	},
+    "data_points_path": "data/data.csv",
+    "approximation_points_path": "data/grid.csv"
+}
